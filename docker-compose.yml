@@ -7,11 +7,9 @@ services:
       - ./.envs/.postgres
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 34.136.178.209:8000
     env_file:
       - ./.envs/.postgres
-    environment:
-      - PYTHONUNBUFFERED=1
     volumes:
       - .:/code
     ports:
